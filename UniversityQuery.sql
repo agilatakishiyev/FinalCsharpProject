@@ -1,0 +1,65 @@
+--create database University
+
+--create table Subjects(
+--	ID int primary key identity,
+--	Name nvarchar(50)
+--)
+
+--create table Teachers(
+--	ID int primary key identity,
+--	Identifier nvarchar(10),
+--	Firstname nvarchar(50),
+--	Lastname nvarchar(50),
+--	Password nvarchar(255)
+--)
+--create table Groups(
+--	ID int primary key identity,
+--	Name nvarchar(50)
+--)
+--create table Students(
+--	ID int primary key identity,
+--	Identifier nvarchar(10),
+--	Birthdate datetime,
+--	Firstname nvarchar(50),
+--	Lastname nvarchar(50),
+--	GroupID int references Groups(ID),
+--	Password nvarchar(255)
+--)
+--alter table Teachers
+--add Birthdate datetime
+--create table Questions(
+--	ID int primary key identity,
+--	Content nvarchar(MAX),
+--	AnswerA nvarchar(MAX),
+--	AnswerB nvarchar(MAX),
+--	AnswerC nvarchar(MAX),
+--	AnswerD nvarchar(MAX),
+--	AnswerE nvarchar(MAX),
+--	CorrectAnswer nvarchar(MAX),
+--	SubjectID int references Subjects(ID)
+--)
+--create table Evaluation(
+--	ID int primary key identity,
+--	StudentID int references Students(ID),
+--	SubjectID int references Subjects(ID),
+--	EntryPoint int ,
+--	ExamPoint int,
+--	TotalPoint int
+--)
+--create table Grades(
+--	ID int primary key identity,
+--	StudentID int references Students(ID),
+--	SubjectID int references Subjects(ID),
+--	Point int ,
+--	ScoreDate datetime
+--)	
+--create table TeacherOfSubjectToGroup(
+--	ID int primary key identity,
+--	TeacherID int references Teachers(ID),
+--	SubjectID int references Subjects(ID),
+--	GroupID int references Groups(ID)
+--)
+--alter table Teachers
+--add Status bit
+--alter table Students
+--add Status bit
